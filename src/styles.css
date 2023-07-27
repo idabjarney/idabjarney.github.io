@@ -1,11 +1,66 @@
 @import url("https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
+header .floating-wrapper {
+  padding: 1rem; }
+  header .floating-wrapper .floating-header {
+    padding: 0.5rem; }
+    header .floating-wrapper .floating-header .header-icons {
+      font-size: 25px; }
+
+main .banner .wrapper {
+  background-color: black;
+  opacity: 1; }
+  main .banner .wrapper .image-wrapper img {
+    opacity: 0.4; }
+  main .banner .wrapper .inner .text-container {
+    width: 450px;
+    margin: 3rem 0; }
+    main .banner .wrapper .inner .text-container h1 {
+      margin-bottom: 1rem; }
+  @media (max-width: 770px) {
+    main .banner .wrapper {
+      height: 450px; } }
+  @media (max-width: 575px) {
+    main .banner .wrapper {
+      height: 420px; } }
+
+main .top-feature .grid-container .product-container {
+  width: 467.5px; }
+  main .top-feature .grid-container .product-container .pre-order-badge {
+    top: 0;
+    right: 0;
+    padding: 0.5rem 1rem; }
+    main .top-feature .grid-container .product-container .pre-order-badge p {
+      text-transform: uppercase;
+      font-size: 0.8rem;
+      letter-spacing: 1px;
+      font-weight: 500; }
+  main .top-feature .grid-container .product-container .product-image img {
+    width: 100%; }
+  main .top-feature .grid-container .product-container .product-text .info {
+    font-size: 0.9rem; }
+  @media (max-width: 992px) {
+    main .top-feature .grid-container .product-container {
+      width: 332.5px; } }
+  @media (max-width: 765px) {
+    main .top-feature .grid-container .product-container {
+      width: 500px; } }
+
+@media (max-width: 765px) {
+  main .top-feature .grid-container {
+    grid-template-columns: repeat(1, 1fr); } }
+
+@media (max-width: 765px) {
+  main .mid-banner .text-container {
+    width: 350px; } }
+
 :root {
   font-family: 'Prompt', sans-serif;
   line-height: 1.2;
-  font-weight: 400;
+  font-weight: 300;
+  font-size: 14px;
   color-scheme: light dark;
-  color: #f0f0f0;
-  background-color: #242424;
+  color: #1a2456;
+  background-color: #f0efed;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -24,9 +79,19 @@ a {
 ul {
   list-style-type: none; }
 
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+  letter-spacing: 2px;
+  text-transform: uppercase; }
+
 .h1 {
   letter-spacing: 4px;
-  font-size: 2.5rem; }
+  font-size: 2.5rem;
+  font-weight: 600; }
+
+h5, .h5 {
+  font-size: 1.25rem;
+  letter-spacing: 1.5px;
+  font-weight: 600; }
 
 .text-pink {
   color: #efc2b3; }
@@ -34,17 +99,41 @@ ul {
 .text-blue {
   color: #1a2456; }
 
+.text-white {
+  color: #f0efed; }
+
+.text-black {
+  color: #080b1b; }
+
 .bg-blue {
   background-color: #1a2456; }
 
 .bg-white {
   background-color: #f0efed; }
 
+.bg-orange {
+  background-color: #ff8d6b; }
+
 .text-center {
   text-align: center; }
 
 .d-flex {
   display: flex; }
+
+.grid-2x2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 14px;
+  grid-row-gap: 30px; }
+
+.grid-3x2 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 48px;
+  grid-row-gap: 30px; }
+
+.grid-2x2-child {
+  grid-area: 1 / 5 / NaN / NaN; }
 
 .align-c {
   align-items: center; }
@@ -55,11 +144,20 @@ ul {
 .justify-fstart {
   justify-content: flex-start; }
 
+.justify-between {
+  justify-content: space-between; }
+
+.column {
+  flex-direction: column; }
+
 .w-100 {
   width: 100%; }
 
-.h-100 {
+.h-100vh {
   height: 100vh; }
+
+.h-100 {
+  height: 100%; }
 
 .p-lead {
   font-size: 1.25rem;
@@ -86,5 +184,32 @@ ul {
 .obj-cover {
   object-fit: cover; }
 
+.obj-contain {
+  object-fit: contain; }
+
 .cover-h {
-  height: 450px; }
+  height: 675px; }
+
+.mid-banner-h {
+  height: 507px; }
+
+.z-100 {
+  z-index: 100; }
+
+.margin-b {
+  margin-bottom: 0.5rem; }
+
+.margin-t {
+  margin-top: 0.5rem; }
+
+.margin-b3r {
+  margin-bottom: 3rem; }
+
+.margin-t3r {
+  margin-top: 3rem; }
+
+.margin-b1r {
+  margin-bottom: 1rem; }
+
+.margin-t1r {
+  margin-top: 1rem; }

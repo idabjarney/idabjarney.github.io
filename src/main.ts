@@ -1,3 +1,3 @@
 import './styles.scss'
-
-const wrapper: HTMLDivElement | null = document.querySelector('.wrapper');
+import './body.scss'
+import 'boxicons'

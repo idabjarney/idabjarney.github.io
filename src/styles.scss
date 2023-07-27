@@ -10,7 +10,7 @@ $black: #080b1b;
 
 :root {
   font-family: 'Prompt', sans-serif;
-  line-height: 1.2;
+  line-height: 1.5;
   font-weight: 300;
   font-size: 14px;
   color-scheme: light dark;
@@ -23,6 +23,7 @@ $black: #080b1b;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 }
+
 
 * {
   margin: 0;
@@ -100,16 +101,21 @@ h5,.h5 {
   grid-row-gap: 30px;
 }
 
-.grid-3x2 {
+.grid-3x {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-column-gap: 48px;
   grid-row-gap: 30px;
 }
 
-.grid-2x2-child {
-  grid-area: 1 / 5 / NaN / NaN;
+.grid-6fr {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  grid-template-areas: "address quicklinks help information subscribe subscribe";
 }
+
+
 
 .align-c {
   align-items: center;
@@ -146,6 +152,23 @@ h5,.h5 {
 .p-lead {
   font-size: 1.25rem;
   font-weight: 300;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.footer-heading {
+  font-size: .8em;
+  font-weight: 600;
+  letter-spacing: 1px;
+  min-width: 6em;
+  text-transform: uppercase;
+}
+
+address {
+  font-style: normal;
+  line-height: inherit;
 }
 
 .hidden {
@@ -200,10 +223,20 @@ h5,.h5 {
   margin-top: 0.5rem;
 }
 
+.margin-b2r {
+  margin-bottom: 2rem;
+
+}
+
 .margin-b3r {
   margin-bottom: 3rem;
 
 }
+
+.margin-t2r {
+  margin-top: 3rem;
+}
+
 .margin-t3r {
   margin-top: 3rem;
 }
@@ -214,4 +247,20 @@ h5,.h5 {
 }
 .margin-t1r {
   margin-top: 1rem;
+}
+
+.padding-b5r {
+  padding-bottom: 5rem;
+
+}
+.padding-t3r {
+  padding-top: 3rem;
+}
+
+.col-padding {
+  padding: 0 1rem 1rem 1rem;
+}
+
+.padding-3r {
+  padding: 3rem;
 }

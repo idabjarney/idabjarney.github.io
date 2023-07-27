@@ -83,4 +83,101 @@ main {
       }
     }
   }
+  .bottom-feature {
+    .grid-container {
+      .product-container {
+        width: 338px;
+        .pre-order-badge {
+          top: 0;
+          right: 0;
+          padding: 0.5rem 1rem;
+          p {
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            letter-spacing: 1px;
+            font-weight: 500;
+          }
+        }
+        .product-image {
+          img {
+            object-fit: cover;
+            width: 100%;
+            height: 338px;
+            @media (max-width: 1200px) {
+              height: 440px;
+            }
+            @media (max-width: 990px) {
+              height: 333px;
+            }
+            @media (max-width: 768px) {
+              height: 100%;
+              object-fit: contain;
+            }
+          }
+        }
+        .product-text {
+          .info {
+            font-size: 0.9rem;
+          }
+        }
+        @media (max-width: 1200px) {
+          width: 440px;
+        }
+        @media (max-width: 990px) {
+          width: 333px;
+        }
+        @media (max-width: 768px) {
+          width: 500px;
+        }
+      }
+      @media (max-width: 1200px) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      @media (max-width: 990px) {
+        grid-column-gap: 1rem;
+      }
+      @media (max-width: 768px) {
+        grid-template-columns: repeat(1, 1fr);
+      }
+    }
+  }
+  footer {
+    .grid-item1 {
+      grid-area: address;
+    }
+    .grid-item2 {
+      grid-area: quicklinks;
+    }
+    .grid-item3 {
+      grid-area: help;
+    }
+    .grid-item4 {
+      grid-area: information;
+    }
+    .grid-item5 {
+      grid-area: subscribe;
+      @media (max-width: 990px) {
+        .copyright-p {
+          display: none!important;
+        }
+      }
+    }
+    @media (max-width: 990px) {
+      padding: 2rem!important;
+      grid-template-columns: repeat(2, 1fr)!important;
+      grid-template-rows: repeat(3, 1fr)!important;
+      grid-template-areas: 
+      "address subscribe subscribe" 
+      "quicklinks help information"!important;
+    }
+    @media (max-width: 575px) {
+      padding: .5rem!important;
+      grid-template-columns: repeat(2, 1fr)!important;
+      grid-template-rows: repeat(3, 1fr)!important;
+      grid-template-areas: 
+        "subscribe subscribe" 
+        "address quicklinks"
+        "help information"!important;
+    }
+  }
 }

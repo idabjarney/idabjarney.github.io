@@ -12,7 +12,7 @@ $black: #080b1b;
   font-family: 'Prompt', sans-serif;
   line-height: 1.5;
   font-weight: 300;
-  font-size: 14px;
+  font-size: 15px;
   color-scheme: light dark;
   color: $blue;
   background-color: $white;
@@ -29,8 +29,19 @@ $black: #080b1b;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  list-style-type: none;
+  :focus {
+    outline: none;
+  }
 }
 
+input[type="submit"], input[type="email"] {
+  font-family: 'Prompt', sans-serif;
+}
+
+.open {
+  transform: translateX(0);
+}
 
 a {
   text-decoration: none;
@@ -81,8 +92,16 @@ h5,.h5 {
   background-color: $white;
 }
 
+.bg-fff {
+  background-color: #fff;
+}
+
 .bg-orange {
   background-color: $orange;
+}
+
+.bg-pink {
+  background-color: $pink;
 }
 
 .text-center {
@@ -91,6 +110,10 @@ h5,.h5 {
 
 .d-flex {
   display: flex;
+}
+
+.display-none {
+  display: none;
 }
 
 .grid-2x2 {

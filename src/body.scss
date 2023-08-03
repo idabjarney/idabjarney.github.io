@@ -6,12 +6,22 @@ $black: #080b1b;
 
 header {
   .nav-module-wrapper {
+    transition: 500ms ease-in;
     height: 100%;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.4);
     z-index: 9999;
-    transform: translateX(-100%);
+    visibility: hidden;
+    cursor: pointer;
     nav {
+      cursor: default;
+      transition: 600ms;
+      // transform: translateX(-100%);
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      float: left;
+      display: block;
+      left: -350px;
       width: 350px;
       height: 100%;
       padding: 1.5rem;
@@ -23,8 +33,10 @@ header {
             cursor: pointer;
           }
         }
-        i {
-          font-size: 1.6rem;
+        button {
+          i {
+            font-size: 1.6rem;
+          }
         }
       }
       .nav-list {
@@ -70,14 +82,36 @@ header {
         }
       }
     }
+    &.show {
+      visibility: visible;
+      background-color: rgba(0, 0, 0, 0.4);
+
+      nav {
+        left: 0px;
+        // transform: translateX(0%);
+        // animation: openMenu 300ms ease-in;
+
+      }
+    }
 
   }
 
   .floating-wrapper {
-    padding: 1.1rem;
+    padding: 1rem;
+    @media (max-width: 575px) {
+      padding: .5rem;
+    }
+    @media (max-width: 365px) {
+      padding: 0rem;
+    }
     .floating-header {
       padding: 0.5rem 0.7rem;
       .logo {
+        svg {
+          @media (max-width: 365px) {
+            width: 140px;
+          }
+        }
         &:hover {
           cursor: pointer;
           color: $orange;
@@ -111,6 +145,7 @@ header {
               ul {
                 padding: 0.5rem 0;
                 margin-top: .5rem;
+                display: none;
                 li {
                   font-size: 1rem;
                   letter-spacing: 2px;
@@ -125,6 +160,9 @@ header {
                     color: #fff;
                   }
                 }
+                &.show {
+                  display: block;
+                }
               }
             }
             .hover {
@@ -135,21 +173,23 @@ header {
           }
         }
         .header-icons {
-          font-size: 25px;
-          i {
-            padding: 0rem .5rem;
-            &:hover {
-              cursor: pointer;
-              color: $orange;
+          button {
+            font-size: 25px;
+            i {
+              padding: 0rem .5rem;
+              &:hover {
+                cursor: pointer;
+                color: $orange;
+              }
+              @media (max-width: 992px) {
+                padding-left: 0rem .5rem 0rem 0rem;
+              }
             }
-            @media (max-width: 992px) {
-              padding-left: 0rem .5rem 0rem 0rem;
-            }
-          }
-          .burger {
-            font-size: 22px;
-            @media (max-width: 992px) {
-              display: block;
+            .burger {
+              font-size: 22px;
+              @media (max-width: 992px) {
+                display: block;
+              }
             }
           }
           .bag {
@@ -203,21 +243,27 @@ main {
         }
       }
       .inner {
+        padding: 17.5rem 0rem 1.5rem 0;
+        justify-content: space-between;
         .text-container {
           width: 450px;
-          margin: 3rem 0;
           h1 {
             margin-bottom: 1rem;
           }
         }
         .downward-btn {
-          transform: translateY(13rem);
-          @media (max-width: 770px) {
-            transform: translateY(5rem);
+          scale: 1;
+          transition: 300ms ease-out;
+          &:hover {
+            scale: 1.2;
           }
-          @media (max-width: 575px) {
-            transform: translateY(4rem);
-          }
+        }
+        @media (max-width: 770px) {
+          height: 450px;
+          padding: 9.8rem 0rem 1.5rem 0!important;
+        }
+        @media (max-width: 575px) {
+          height: 420px;
         }
       }
 

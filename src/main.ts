@@ -1,3 +1,3 @@
 import './styles.scss'
 import './body.scss'
-import 'boxicons'
+import './header.ts'

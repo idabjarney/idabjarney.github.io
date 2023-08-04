@@ -61,6 +61,7 @@ header {
           padding-bottom: 0 !important;
           border-bottom: none !important;
           a {
+            display: block;
             padding: .8em 0em;
             padding-top: 0;
             // margin-bottom: .5em;
@@ -192,23 +193,23 @@ header {
               }
             }
           }
-          .bag {
-          }
         }
         .dropdown-wrapper {
-          .current-currency {
+          .current-currency-btn {
+            cursor: pointer;
             font-size: .8rem;
             font-weight: 600;
             letter-spacing: 2px;
             padding: 0.6rem 0rem 0.6rem 0.6rem;
             p {
+              pointer-events: none;
               &:hover {
                 color: $orange;
-                cursor: pointer;
               }
             }
           }
           .currency-picker-container {
+            display: none;
             right: 0;
             margin-right: .5rem;
             padding: .5rem 0rem;
@@ -224,6 +225,9 @@ header {
                 background-color: $blue;
                 color: #fff;
               }
+            }
+            &.show {
+              display: block;
             }
           }
         }

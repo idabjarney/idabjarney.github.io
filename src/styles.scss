@@ -36,22 +36,10 @@ $black: #080b1b;
   }
 }
 
-@keyframes openMenu {
-  0% {
-    transform: translateX(-100%);
-  }
-  100% {
-    transform: translate(0);
-  }
-
-}
-@keyframes closeMenu {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translate(-100%);
-  }
+a, button, ul, li, .prevent-selection {
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
 }
 
 button {
@@ -162,7 +150,9 @@ h5,.h5 {
   grid-template-areas: "address quicklinks help information subscribe subscribe";
 }
 
-
+.box-shadow {
+  box-shadow: 1px 10px 23px 0px rgba(0,0,0,0.31);
+}
 
 .align-c {
   align-items: center;

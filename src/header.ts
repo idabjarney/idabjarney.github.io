@@ -7,6 +7,8 @@ const workflowList: HTMLUListElement | null = document.querySelector('.workflow-
 const popups: NodeListOf<HTMLElement> | null = document.querySelectorAll('.popup');
 const currencyBtn: HTMLDivElement | null = document.querySelector('.current-currency-btn');
 const currencyContainer: HTMLDivElement | null = document.querySelector('.currency-picker-container');
+const currencyItems: HTMLDivElement[] | null = Array.from(document.querySelectorAll('.currency-item'));
+const selectedCurrency: HTMLParagraphElement | null = document.querySelector('.selected-currency');
 
 menuBtn?.addEventListener('click', function(): void {
   toggleElement(navWrapper)
@@ -33,7 +35,14 @@ currencyBtn?.addEventListener('click', function(): void {
   toggleElement(currencyContainer);
 })
 
-
+for (const currencyItem of currencyItems) {
+  currencyItem.addEventListener('click', function(): void {
+    const newCurrency = currencyItem.innerText.split(/\n/).shift();
+    if (selectedCurrency) {
+      selectedCurrency.innerText = newCurrency;
+    }
+  })
+}
 
 window.addEventListener('click', ({target}) => {
   const popup = (target as HTMLElement).closest('.popup');

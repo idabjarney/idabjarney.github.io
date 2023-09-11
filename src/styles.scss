@@ -31,6 +31,7 @@ $black: #080b1b;
   box-sizing: border-box;
   list-style-type: none;
   transition: 40ms ease-out;
+  scroll-behavior: smooth;
   :focus {
     outline: none;
   }

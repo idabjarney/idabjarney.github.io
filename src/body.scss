@@ -201,10 +201,13 @@ header {
             font-weight: 600;
             letter-spacing: 2px;
             padding: 0.6rem 0rem 0.6rem 0.6rem;
-            p {
+            .selected-currency, .down-arrow-icon {
               pointer-events: none;
-              &:hover {
+            }
+            &:hover {
+              .selected-currency, .down-arrow-icon {
                 color: $orange;
+
               }
             }
           }
@@ -304,6 +307,9 @@ main {
           .info {
             font-size: 0.9rem;
           }
+        }
+        @media (max-width: 1152px) {
+          width: 450px;
         }
         @media (max-width: 992px) {
           width: 332.5px;
